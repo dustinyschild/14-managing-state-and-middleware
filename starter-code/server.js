@@ -18,8 +18,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
 
-// COMMENT: What is this function doing? Why do we need it? Where does it receive a request from?
-// (put your response in a comment here)
+// COM/MENT: What is this function doing? Why do we need it? Where does it receive a request from?
+// First we console.log the request, then we are calling requestProxy and passing it the Url base on our request along with out github token for authentication.
 function proxyGitHub(request, response) {
   console.log('Routing GitHub request for', request.params[0]);
   (requestProxy({
