@@ -77,7 +77,8 @@ var app = app || {};
     }
   };
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // COM/MENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  //Submits an ajax request to the server with the url /articles and method DELETE which calls a query in server.js that truncates the articles table, meaning it clears on the contents while still keeping the table. Then console logging the response.
   Article.truncateTable = callback => {
     $.ajax({
       url: '/articles',
