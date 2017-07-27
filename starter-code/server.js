@@ -106,8 +106,8 @@ app.post('/articles', function(request, response) {
 });
 
 
-// COMMENT: What is this route doing? Where does it receive a request from?
-// (put your response in a comment here)
+// COM/MENT: What is this route doing? Where does it receive a request from?
+// the request comes from the view to update the authors table setting the author and authorUrl to the request data where author_id equals the request id.
 app.put('/articles/:id', (request, response) => {
   client.query(`
     UPDATE authors
