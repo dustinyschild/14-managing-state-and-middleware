@@ -12,5 +12,6 @@ page('/author', '/');
 page('/author/:authorName', app.articleController.loadByAuthor, app.articleController.index);
 page('/category/:categoryName', app.articleController.loadByCategory, app.articleController.index);
 
-// COMMENT: What is this function doing?
+// COM/MENT: What is this function doing?
+//This function is initializing the pages that are being handled py the page.js library
 page();
