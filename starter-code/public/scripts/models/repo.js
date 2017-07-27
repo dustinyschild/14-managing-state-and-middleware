@@ -9,8 +9,8 @@ var app = app || {};
   // This function is making a request to /github/user/repos, then setting the return value as repos.all in the Promise function, then calls the callback supplied by the function call
   repos.requestRepos = function(callback) {
     $.get('/github/user/repos')
-    .then(data => repos.all = data, err => console.error(err))
-    .then(callback);
+      .then(data => repos.all = data, err => console.error(err))
+      .then(callback);
   };
 
   repos.with = attr => repos.all.filter(repo => repo[attr]);
