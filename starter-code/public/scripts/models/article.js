@@ -20,7 +20,7 @@ var app = app || {};
     Article.all = rows.map(ele => new Article(ele));
   };
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // COM/MENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
   // Does a get request for /articles to the server which selects all rows from the articles table in the database and then takes the results from the query and passes it into articles.loadall as seen above.
   Article.fetchAll = callback => {
     $.get('/articles')
@@ -56,7 +56,8 @@ var app = app || {};
                       }, []);
   };
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // COM/MENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  //for each author in article.allAuthors it is returning the name of the author as well as filtering through the articles based on the authors name and returning the total word count of them all combined.
   Article.numWordsByAuthor = () => {
     return Article.allAuthors().map(author => {
       return {
