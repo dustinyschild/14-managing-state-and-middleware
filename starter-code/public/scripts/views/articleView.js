@@ -4,7 +4,9 @@ var app = app || {};
 (function(module) {
   const articleView = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+
+  // COM/MENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // setting template to our Handlebars template #article-template. Then we set the individual values of article.daysAgo which is the difference of the current date and the date it was published on. It then checks the value of article.publish status and if published takes the daysAgo value to display when it was published otherwise it says its a draft. After that we parse our article body with marked and finally pass our article into template.
   const render = function(article) {
     let template = Handlebars.compile($('#article-template').text());
 
