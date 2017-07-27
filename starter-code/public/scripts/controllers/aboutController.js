@@ -4,8 +4,8 @@ var app = app || {};
 (function(module) {
   const aboutController = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
-  // (put your response in a comment here)
+  // COM/MENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // This shows the element with id of `about`, gets its siblings, then hides the siblings. Next it calls app.repos.requestRepos with callback function of app.repoView.index
   aboutController.index = () => {
     $('#about').show().siblings().hide();
     app.repos.requestRepos(app.repoView.index);
