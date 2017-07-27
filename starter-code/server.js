@@ -29,8 +29,8 @@ function proxyGitHub(request, response) {
 }
 
 
-// COMMENT: What is this route doing? Where does it receive a request from?
-// (put your response in a comment here)
+// COM/MENT: What is this route doing? Where does it receive a request from?
+//The request is coming from the view and for /new we are responding with the file new.html, for /admin we return the file admin.html, and for /github/* we call proxyGitHub which is ran up above.
 app.get('/new', (request, response) => response.sendFile('new.html', {root: './public'}));
 app.get('/admin', (request, response) => response.sendFile('admin.html', {root: './public'}));
 app.get('/github/*', proxyGitHub);
